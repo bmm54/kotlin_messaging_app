@@ -1,9 +1,5 @@
 # Kotlin Messaging App
 
-![App Screenshots](screenshots/sc1.png)
-![App Screenshots](screenshots/sc2.png)
-![App Screenshots](screenshots/sc3.png)
-![App Screenshots](screenshots/sc4.png)
 
 ## Description
 This is a real-time messaging application built with Kotlin. It provides a seamless and secure communication platform for users to exchange messages in real-time.
@@ -17,10 +13,13 @@ This is a real-time messaging application built with Kotlin. It provides a seaml
 
 ## Screenshots
 
-![App Screenshots](screenshots/sc1.png)
-![App Screenshots](screenshots/sc2.png)
-![App Screenshots](screenshots/sc3.png)
-![App Screenshots](screenshots/sc4.png)
+<div align="center">
+  <img src="screenshots/sc1.png" width="200" height="400" />
+  <img src="screenshots/sc2.png" width="200" height="400" />
+  <img src="screenshots/sc3.png" width="200" height="400" />
+  <img src="screenshots/sc4.png" width="200" height="400" />
+</div>
+
 
 ## Technologies Used
 
