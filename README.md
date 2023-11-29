@@ -14,10 +14,10 @@ This is a real-time messaging application built with Kotlin. It provides a seaml
 ## Screenshots
 
 <div align="center">
-  <img src="screenshots/sc1.png" width="200" height="400" />
-  <img src="screenshots/sc2.png" width="200" height="400" />
-  <img src="screenshots/sc3.png" width="200" height="400" />
-  <img src="screenshots/sc4.png" width="200" height="400" />
+  <img src="screenshots/sc1.png" width="200" />
+  <img src="screenshots/sc2.png" width="200" />
+  <img src="screenshots/sc3.png" width="200" />
+  <img src="screenshots/sc4.png" width="200" />
 </div>
 
 
