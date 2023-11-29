@@ -2,9 +2,6 @@ package com.example.messaging_app.ui.home.new_messages
 
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.tasks.await
-import kotlinx.coroutines.withContext
 
 class UsersData(
     val uid: String,

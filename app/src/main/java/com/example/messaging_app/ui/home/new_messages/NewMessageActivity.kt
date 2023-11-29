@@ -7,10 +7,6 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.messaging_app.R
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 class NewMessageActivity : AppCompatActivity() {
     private lateinit var users: List<UsersData>
     private lateinit var adapter: UsersAdapter
