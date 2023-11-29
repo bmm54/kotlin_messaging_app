@@ -25,8 +25,7 @@ This is a real-time messaging application built with Kotlin. It provides a seaml
 ## Technologies Used
 
 - Kotlin: The primary programming language for Android app development.
-- Firebase: Utilized for real-time database, user authentication, and cloud messaging.
-- [Additional libraries or frameworks used]
+- Firebase: Utilized for Firestore database, user authentication.
 
 ## Installation
 
