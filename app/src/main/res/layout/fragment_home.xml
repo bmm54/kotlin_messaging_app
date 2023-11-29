@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="top|center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Messages"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:id="@+id/new_msg_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondary"
+                android:text="New"
+                />
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_msgs_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/list_tile_message">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+<!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="top"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="30dp"
+                >
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Messages"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/ic_search"
+                    app:tint="@color/white"/>
+            </LinearLayout>
+            <HorizontalScrollView
+                android:elevation="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="horizontal"
+                    >
+                    <include
+                        layout="@layout/custom_image_card"/>
+                    <include
+                        layout="@layout/custom_image_card"/>
+                    <include
+                        layout="@layout/custom_image_card"/>
+                    <include
+                        layout="@layout/custom_image_card"/>
+                    <include
+                        layout="@layout/custom_image_card"/>
+                    <include
+                        layout="@layout/custom_image_card"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                app:cardCornerRadius="40dp"
+                android:layout_marginBottom="-20dp"
+                android:backgroundTint="@color/secondary"
+                >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:orientation="vertical">
+                        <include
+                            layout="@layout/list_tile_message"
+                            android:id="@+id/cl1"/>
+                        <include
+                            layout="@layout/list_tile_message"
+                            android:id="@+id/cl2"/>
+                        <include
+                            layout="@layout/list_tile_message"
+                            android:id="@+id/cl3"/>
+
+                        <include
+                            layout="@layout/list_tile_message"
+                            />
+
+                        <include
+                            layout="@layout/list_tile_message"
+                            />
+                        <include
+                            layout="@layout/list_tile_message"
+                            />
+                        <include
+                            layout="@layout/list_tile_message"
+                            />
+                        <include
+                            layout="@layout/list_tile_message"
+                            />
+                    </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>-->

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    tools:context=".ui.login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@color/secondary"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|center"
+android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/welcome"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:padding="20dp"
+            android:paddingTop="10dp"
+            android:background="@color/main"
+            android:layout_gravity="bottom"
+            >
+
+            <Button
+                android:id="@+id/g_login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/secondary"
+                android:drawableLeft="@drawable/google"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="Sign In With Google"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="15dp" />
+
+            <Button
+                android:id="@+id/f_login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/blue"
+                android:capitalize="none"
+                android:drawableLeft="@drawable/facebook"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:text="Sign In With Facebook"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:cornerRadius="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,55 @@
+<!-- res/layout/custom_item_layout.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:paddingVertical="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Include the custom image card layout -->
+    <include
+        layout="@layout/custom_image_card"
+        android:id="@+id/custom_imageview"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="8dp">
+
+        <!-- TextView for user name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User name"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- TextView for message -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="message a very loooong maeessssssssssss"
+            android:textColor="#B3B9C9"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <!-- TextView for time -->
+    <TextView
+        android:text="12:16"
+        android:textColor="#B3B9C9"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

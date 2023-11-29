@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:padding="8dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+  <androidx.cardview.widget.CardView
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:cardElevation="0dp"
+      android:layout_marginHorizontal="0dp"
+      app:cardCornerRadius="100dp"
+      android:backgroundTint="@color/secondary">
+
+    <ImageView
+        android:id="@+id/user_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:background="@color/secondary"
+        android:src="@drawable/image" />
+  </androidx.cardview.widget.CardView>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical"
+      android:layout_gravity="center_vertical"
+      android:layout_marginHorizontal="8dp">
+
+    <!-- TextView for user name -->
+    <TextView
+        android:id="@+id/user_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User name"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <!-- TextView for message -->
+    <TextView
+        android:id="@+id/user_email_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="email@gmail.com"
+        android:textColor="#B3B9C9"
+        android:textSize="16dp" />
+
+  </LinearLayout>
+</LinearLayout>
