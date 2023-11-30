@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.messaging_app.databinding.FragmentHomeBinding
+import com.example.messaging_app.ui.home.chat.ChatActivity
 import com.example.messaging_app.ui.home.new_messages.NewMessageActivity
 
 class HomeFragment : Fragment() {
@@ -30,6 +31,10 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
         binding.newMsgBtn.setOnClickListener{
             val intent=Intent(this.context, NewMessageActivity::class.java)
+            startActivity(intent)
+        }
+        binding.chatBtn.setOnClickListener{
+            val intent=Intent(this.context, ChatActivity::class.java)
             startActivity(intent)
         }
         return root

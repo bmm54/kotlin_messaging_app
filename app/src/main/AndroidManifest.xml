@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Messaging_app"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.chat.ChatActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.home.new_messages.NewMessageActivity"
             android:exported="false">
             <meta-data

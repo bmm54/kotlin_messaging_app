@@ -40,12 +40,12 @@ class UsersAdapter (private var users: List<UsersData>) : RecyclerView.Adapter<U
     // Involves populating data into the item through holder
     override fun onBindViewHolder(viewHolder: UsersAdapter.ViewHolder, position: Int) {
         // Get the data model based on position
-        val user: UsersData = users.get(position)
+        val user: UsersData = users[position]
         // Set item views based on your views and data model
         val textView = viewHolder.nameTextView
-        textView.setText(user.name)
+        textView.text = user.name
         val emailTextView = viewHolder.emailTextView
-        emailTextView.setText(user.email)
+        emailTextView.text = user.email
         val imageUrl:ImageView = viewHolder.imageUrlView
         Glide.with(imageUrl.context).load(user.imageUrl).into(imageUrl)
     }

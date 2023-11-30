@@ -15,7 +15,6 @@ class UsersData(
         fun startListeningForUsers(callback: (List<UsersData>) -> Unit) {
             // Stop previous listener if exists
             stopListeningForUsers()
-
             // Start a new listener
             listenerRegistration = FirebaseFirestore.getInstance().collection("users")
                 .addSnapshotListener { querySnapshot, _ ->
