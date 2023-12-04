@@ -5,20 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.chat.ChatActivity">
-
-    <View
-        android:id="@+id/dark_divider"
+    <LinearLayout
+        android:id="@+id/chat_log_info"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/main"/>
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@color/main">
+        <TextView
+            android:id="@+id/chat_log_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="20dp"/>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_messages"
+        android:id="@+id/rv_chat_log"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/secondary"
         android:layout_above="@id/ll_layout_bar"
-        android:layout_below="@id/dark_divider"
+        android:layout_below="@id/chat_log_info"
         tools:listitem="@layout/message_item" />
 
     <LinearLayout
@@ -37,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:backgroundTint="@color/grey"
             android:hint="Type a message..."
             android:padding="10dp"
@@ -52,5 +64,6 @@
             android:textColor="@android:color/white" />
 
     </LinearLayout>
+
 
 </RelativeLayout>

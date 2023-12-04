@@ -1,3 +1,4 @@
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -6,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.messaging_app.R
+import com.example.messaging_app.ui.home.chat.ChatActivity
 import com.example.messaging_app.ui.home.new_messages.UsersData
 
 
@@ -49,6 +51,11 @@ class UsersAdapter (private var users: List<UsersData>) : RecyclerView.Adapter<U
         val imageUrl:ImageView = viewHolder.imageUrlView
         Glide.with(imageUrl.context).load(user.imageUrl).into(imageUrl)
     }
+
+    fun onItemClicked(user: UsersData) {
+
+    }
+
 
     // Returns the total count of items in the list
     override fun getItemCount(): Int {
