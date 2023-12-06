@@ -5,11 +5,11 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
-    <fragment
+    <activity
         android:id="@+id/navigation_home"
-        android:name="com.example.messaging_app.ui.home.HomeFragment"
+        android:name="com.example.messaging_app.LatestMessages"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/activity_latest_messages" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -17,9 +17,9 @@
         android:label="@string/calls"
         tools:layout="@layout/fragment_calls" />
 
-    <fragment
+    <activity
         android:id="@+id/navigation_notifications"
-        android:name="com.example.messaging_app.ui.settings.SettingsFragment"
+        android:name="com.example.messaging_app.ui.settings.SettingsActivity"
         android:label="@string/settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/activity_settings" />
 </navigation>

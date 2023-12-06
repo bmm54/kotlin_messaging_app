@@ -11,4 +11,5 @@
     <color name="secondary">#292F3F</color>
     <color name="transparent">#00000000</color>
     <color name="grey">#757575</color>
+    <color name="darkgrey">#3D4354</color>
 </resources>

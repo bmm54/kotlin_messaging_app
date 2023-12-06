@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main"
     tools:context=".ui.home.new_messages.NewMessageActivity"
     >
 <LinearLayout
@@ -11,16 +12,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-    <TextView
+    <LinearLayout
+        android:id="@+id/chat_log_info"
         android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|start"
+        android:background="@color/main">
+        <Button
+            android:id="@+id/nm_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical|start"
+            android:drawableTint="@color/white"
+            android:drawableBottom="@drawable/ic_back"
+            />
+        <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="New Messages"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+            android:layout_gravity="start|center_vertical"
+        android:text="New Message"
         />
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/users_list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
         tools:listitem="@layout/recycler_view_item" />
 </LinearLayout>
 

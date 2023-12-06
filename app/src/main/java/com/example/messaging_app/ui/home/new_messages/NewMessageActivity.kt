@@ -25,12 +25,16 @@ class NewMessageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)
+
+        findViewById<Button>(R.id.nm_back).setOnClickListener {
+            finish()
+        }
         fetchUsers()
     }
 
-//    companion object {
-//        val USER_KEY = "USER_KEY"
-//    }
+    companion object {
+        val USER_KEY = "USER_KEY"
+    }
     private fun fetchUsers() {
         val usersAdapter = GroupAdapter<GroupieViewHolder>()
 
@@ -57,7 +61,6 @@ class NewMessageActivity : AppCompatActivity() {
             userData.putString("uid", userItem.user.uid)
             userData.putString("name", userItem.user.name)
             userData.putString("image_url", userItem.user.image_url)
-            userData.putString("email", userItem.user.email)
             val intent = Intent(view.context, ChatActivity::class.java)
             intent.putExtra("user", userData)
             setResult(RESULT_OK, intent)
@@ -73,6 +76,8 @@ class UserItem(val user: User): Item<GroupieViewHolder>() {
         //set image using glide
         val imageView:ImageView = viewHolder.itemView.findViewById(R.id.user_image_view)
         Glide.with(imageView.context).load(user.image_url).into(imageView)
+        //set email
+        viewHolder.itemView.findViewById<TextView>(R.id.user_email_text).text = user.email
         //Picasso.get().load(user.profileImageUrl).into(viewHolder.itemView.imageview_new_message)
     }
 

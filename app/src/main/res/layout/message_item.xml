@@ -9,7 +9,7 @@
         android:id="@+id/left_chat_text"
         android:padding="8dp"
         android:background="@drawable/rounded_background_left"
-        android:backgroundTint="@color/main"
+        android:backgroundTint="@color/darkgrey"
         android:layout_marginEnd="100dp"
         android:layout_alignParentStart="true"
         android:layout_width="wrap_content"

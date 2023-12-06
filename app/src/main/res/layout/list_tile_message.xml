@@ -1,17 +1,27 @@
-<!-- res/layout/custom_item_layout.xml -->
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:clickable="true"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:paddingVertical="20dp"
+    android:padding="8dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        android:layout_marginHorizontal="0dp"
+        app:cardCornerRadius="100dp"
+        android:backgroundTint="@color/secondary">
 
-    <!-- Include the custom image card layout -->
-    <include
-        layout="@layout/custom_image_card"
-        android:id="@+id/custom_imageview"/>
+        <ImageView
+            android:id="@+id/lt_user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:background="@color/secondary"
+            android:src="@drawable/image" />
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -23,33 +33,41 @@
 
         <!-- TextView for user name -->
         <TextView
+            android:id="@+id/lt_usr_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="User name"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <!-- TextView for message -->
         <TextView
+            android:id="@+id/lt_user_msg_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="message a very loooong maeessssssssssss"
+            android:text="message"
             android:textColor="#B3B9C9"
             android:textSize="16dp" />
 
     </LinearLayout>
 
-    <!-- TextView for time -->
     <TextView
-        android:text="12:16"
-        android:textColor="#B3B9C9"
-        android:layout_weight="1"
-        android:layout_gravity="center_vertical"
-        android:gravity="end"
+        android:id="@+id/lt_user_time_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
+        android:maxWidth="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="12:00"
+        android:textColor="#B3B9C9"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical"
+        />
 </LinearLayout>

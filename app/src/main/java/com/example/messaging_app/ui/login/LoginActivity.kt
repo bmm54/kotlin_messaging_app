@@ -1,25 +1,20 @@
 package com.example.messaging_app.ui.login
 
 import android.content.Intent
-import android.content.pm.ActivityInfo.WindowLayout
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.Window
 import android.view.WindowInsetsController
-import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
-import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.messaging_app.MainActivity
+import com.example.messaging_app.LatestMessages
 import com.example.messaging_app.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.tasks.Task
-import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
@@ -104,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
                     .set(user)
                     .addOnSuccessListener {
                         // Successfully stored user information in Firestore
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, LatestMessages::class.java)
                         intent.flags =
                             Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT
                         startActivity(intent)
